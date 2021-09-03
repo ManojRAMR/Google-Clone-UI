@@ -115,15 +115,24 @@ main {
 #google-logo {
   padding-top: 120px;
 }
+
 form {
   padding: 20px;
 }
+
 #search-bar {
   display: flex;
-  height: 50px;
+  height: 45px;
+  border-radius: calc(22.5px);
   width: 650px;
-  border-radius: 25px;
   border: 1px solid #dfe1e5;
+}
+
+@media all and (max-width: 768px) {
+  #search-bar {
+    height: 45px;
+    width: 450px;
+  }
 }
 
 #search-bar:hover,
@@ -158,6 +167,7 @@ form {
   border: none;
   font-size: 1rem;
 }
+
 #search:active,
 #search:focus {
   outline: none;
@@ -167,6 +177,7 @@ form {
   padding: 20px;
   height: 100px;
 }
+
 .btn {
   min-width: 54px;
   cursor: pointer;
@@ -186,6 +197,7 @@ form {
   color: #202124;
   border: 1px solid #dadce0;
 }
+
 footer {
   display: flex;
   flex-direction: column;
@@ -202,20 +214,29 @@ footer {
 }
 #footer-bottom-section {
   display: flex;
-  height: 50px;
-  padding: 15px 0;
-  align-items: center;
+  height: auto;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 768px) {
+  #footer-bottom-section {
+    flex-direction: column;
+  }
 }
 
 #business-links {
+  height: 50px;
   flex-grow: 2;
-  display: flex;
   gap: 30px;
+  display: flex;
+  align-items: center;
 }
 
 #service-links {
-  display: flex;
+  height: 50px;
   gap: 30px;
+  display: flex;
+  align-items: center;
 }
 
 #business-links a,
